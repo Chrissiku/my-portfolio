@@ -2,8 +2,9 @@ import React from "react";
 import { v4 as menuId } from "uuid";
 import Icon from "react-icons-kit";
 import { home } from "react-icons-kit/fa/home";
+import { user } from "react-icons-kit/fa/user";
 
-const ICON_SIZE = 20;
+const ICON_SIZE = 25;
 
 const linksArray = [
   {
@@ -16,7 +17,7 @@ const linksArray = [
     id: menuId(),
     menu: "About",
     path: "/",
-    icon: <Icon icon={home} size={ICON_SIZE} />,
+    icon: <Icon icon={user} size={ICON_SIZE} />,
   },
   {
     id: menuId(),
@@ -24,12 +25,29 @@ const linksArray = [
     path: "/",
     icon: <Icon icon={home} size={ICON_SIZE} />,
   },
-  
+
   {
     id: menuId(),
     menu: "contact",
     path: "/",
     icon: <Icon icon={home} size={ICON_SIZE} />,
   },
+
+  {
+    id: menuId(),
+    menu: "testimonial",
+    path: "/",
+    icon: <Icon icon={home} size={ICON_SIZE} />,
+  },
 ];
-export default linksArray;
+
+const socialArray = [
+  {
+    id: menuId(),
+    network: "Github",
+    link: "www.github.com/chrissiku",
+    icon: <Icon icon={home} size={ICON_SIZE} />,
+  },
+];
+
+export { linksArray, socialArray };

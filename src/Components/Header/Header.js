@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Icon from "react-icons-kit";
-import linksArray from "./headerData";
+import { linksArray, socialArray } from "./headerData";
 import { thLarge } from "react-icons-kit/fa/thLarge";
 import { close } from "react-icons-kit/fa/close";
 
@@ -26,6 +26,24 @@ const Header = () => {
                 </li>
               </Link>
             ))}
+            {socialArray.map((socialItem) => (
+              <li
+                onClick={toggleNavbar}
+                key={socialItem.id}
+                className="social"
+              >
+                <i>{socialItem.icon}</i>
+                <a href={socialItem.link} target="_blank" rel="noreferrer">
+                  {socialItem.network}
+                </a>
+              </li>
+            ))}
+
+            <div className="button">
+              <button type="button" className="btn">
+                Download CV
+              </button>
+            </div>
           </ul>
           <button
             type="button"
@@ -35,12 +53,6 @@ const Header = () => {
           >
             <Icon icon={close} size={20} />
           </button>
-
-          <div className="button">
-            <button type="button" className="btn">
-              Download CV
-            </button>
-          </div>
         </nav>
 
         <button
