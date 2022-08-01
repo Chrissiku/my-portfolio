@@ -1,7 +1,12 @@
 import "./App.css";
+import Header from "./Components/Header/Header";
 
 const App = () => {
-  return <div className="App">This is my portfolio</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 export default App;
