@@ -125,10 +125,52 @@ header .mobile-nav {
 }
 
 /* Home section */
-section.home {
-  margin-top: 55px;
-  border: 1px solid red;
+section {
   height: calc(100vh - 55px);
+  z-index: -1;
+}
+
+section.home {
+  position: relative;
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #070924;
+  text-align: center;
+  gap: 2rem;
+}
+
+section.home .dev-info h1 {
+  color: var(--text-white);
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+section.home .dev-info h2 {
+  color: var(--text-secondary);
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+section.home p {
+  max-width: 600px;
+  color: rgba(255, 255, 255, 0.733);
+}
+
+section.home .buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+section.home .buttons button {
+  width: 125px;
 }
 
 @media screen and (min-width: 768px) {
