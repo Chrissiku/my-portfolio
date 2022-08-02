@@ -44,6 +44,11 @@ const Header = () => {
                 Download CV
               </button>
             </div>
+            <div className="button">
+              <button type="button" className="btn">
+                Download CV
+              </button>
+            </div>
           </ul>
           <button
             type="button"

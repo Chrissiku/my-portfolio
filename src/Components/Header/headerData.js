@@ -45,6 +45,26 @@ const socialArray = [
   {
     id: menuId(),
     network: "Github",
+    link: "https://github.com/chrissiku",
+    icon: <Icon icon={user} size={ICON_SIZE} />,
+  },
+  {
+    id: menuId(),
+    network: "facebook",
+    link: "www.github.com/chrissiku",
+    icon: <Icon icon={home} size={ICON_SIZE} />,
+  },
+  
+  {
+    id: menuId(),
+    network: "Linkedin",
+    link: "www.github.com/chrissiku",
+    icon: <Icon icon={home} size={ICON_SIZE} />,
+  },
+  
+  {
+    id: menuId(),
+    network: "Twitter",
     link: "www.github.com/chrissiku",
     icon: <Icon icon={home} size={ICON_SIZE} />,
   },
