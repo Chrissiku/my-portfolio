@@ -10,13 +10,13 @@ const Home = () => {
         <p>
           I can help you build a product , feature or website Look through some
           of my work and experience! If you like what you see and have a project
-          you need coded, don’t hestiate to contact me.
+          you need coded, don’t hesitate to contact me.
         </p>
         <div className="buttons">
-          <button type="buton" className="btn">
+          <button type="button" className="btn">
             Contact
           </button>
-          <button type="buton" className="btn">
+          <button type="button" className="btn">
             Download Cv
           </button>
         </div>
