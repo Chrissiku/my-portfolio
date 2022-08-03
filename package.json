@@ -12,7 +12,9 @@
     "react-icons-kit": "^2.0.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
     "react-tsparticles": "^2.1.4",
+    "slick-carousel": "^1.8.1",
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
   },

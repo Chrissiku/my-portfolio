@@ -3,14 +3,14 @@ import work_img from "../../Images/face_co.svg";
 import works from "./WorkData";
 
 const Work = () => {
-  const [visible, setVisible] = useState(3);
+  const [visible, setVisible] = useState(6);
 
   const showMore = () => {
-    setVisible((prev) => prev + works.length - 3);
+    setVisible((prev) => prev + works.length - 6);
   };
 
   const showLess = () => {
-    setVisible((prev) => (prev = 3));
+    setVisible((prev) => (prev = 6));
   };
 
   const LoadMore = () => {
