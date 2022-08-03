@@ -22,6 +22,11 @@ body {
   background-color: var(--bg-dark-color);
   color: var(--text-wight);
   font-family: var(--font-family);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .btn {
@@ -175,7 +180,7 @@ section.home .buttons button {
 }
 
 section.about {
-  min-height: calc(100vh - 55px);
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -255,7 +260,7 @@ section.about .skills .sills-list {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   padding: 20px;
-  border-radius:10px;
+  border-radius: 10px;
   /* background-color: #070924; */
 }
 
@@ -282,6 +287,63 @@ section.about .skills .sills-list .single-skill i {
 
 section.about .skills .sills-list .single-skill p {
   color: rgba(255, 255, 255, 0.733);
+}
+
+section.work {
+  height: auto;
+  background-color: #070924;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  padding: 20px 10px;
+}
+
+section.work .works-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+section.work .works-list .single-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 20px;
+  box-shadow: #a3a3a3 0px 0px 5px 0px;
+  border-radius: 20px;
+}
+
+section.work .works-list .single-work .work-img {
+  width: 100%;
+  height: 220px;
+}
+
+section.work .works-list .single-work .work-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 1s;
+}
+
+section.work .works-list .single-work .work-img img:hover {
+  transform: scale(1.1);
+}
+
+section.work .works-list .single-work .work-title {
+  color: var(--text-white);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+}
+
+section.work .works-list .single-work p {
+  color: rgba(255, 255, 255, 0.733);
+  padding: 10px;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
