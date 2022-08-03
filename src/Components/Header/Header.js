@@ -27,11 +27,7 @@ const Header = () => {
               </Link>
             ))}
             {socialArray.map((socialItem) => (
-              <li
-                onClick={toggleNavbar}
-                key={socialItem.id}
-                className="social"
-              >
+              <li onClick={toggleNavbar} key={socialItem.id} className="social">
                 <i>{socialItem.icon}</i>
                 <a href={socialItem.link} target="_blank" rel="noreferrer">
                   {socialItem.network}

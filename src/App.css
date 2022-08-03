@@ -346,6 +346,18 @@ section.work .works-list .single-work p {
   text-align: center;
 }
 
+section.work .works-list .single-work p .read-more {
+  color: #000;
+  font-size: 12px;
+  background-color: #a3a3a3;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+section.work .works-list .single-work p .read-more:hover {
+  background-color: #fff;
+}
+
 @media screen and (min-width: 768px) {
   /* Header */
 
