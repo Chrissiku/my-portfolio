@@ -20,6 +20,7 @@ const Home = () => {
     <>
       <section className="home">
         <ParticlesBg type="custom" config={config} bg={true} />
+        <ParticlesBg num={50} type="cobweb" bg={true} color="#0ab4e7" />
         <div className="dev-info">
           <h1>Hi, I'm Chris Siku</h1>
           <h2>A Software Developer</h2>

@@ -52,7 +52,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg-dark-color);
-  z-index: 1;
+  z-index: 2;
 }
 
 header .logo {
@@ -133,11 +133,11 @@ header .mobile-nav {
 /* Home section */
 section {
   height: calc(100vh - 55px);
-  z-index: -1;
+  z-index: 1;
+  position: relative;
 }
 
 section.home {
-  position: relative;
   margin-top: 55px;
   display: flex;
   flex-direction: column;
@@ -384,7 +384,6 @@ section.testimonial .cards-list .single-card {
   gap: 1rem;
   padding: 20px;
   margin: auto;
-  background-color: var(--bg-dark-color);
   transition: all 0.5s;
 }
 
@@ -431,6 +430,133 @@ section.testimonial .cards-list .single-card .social i {
 section.testimonial .cards-list .single-card .social i:hover {
   color: rgba(0, 128, 0, 0.562);
   border: 1px solid blue;
+}
+
+section.contact {
+  background-color: #070924;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  padding: 20px 10px;
+}
+
+section.contact .contact-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 20px;
+}
+
+section.contact .contact-cards .contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+section.contact .contact-cards .contact-info .single-contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+section.contact .contact-cards .contact-info .single-contact i {
+  color: var(--text-secondary);
+  border: 3px solid yellow;
+  padding: 10px;
+  border-radius: 50px;
+  transition: all 0.5s;
+}
+
+section.contact .contact-cards .contact-info .single-contact:hover > i {
+  color: yellow;
+  border: 3px solid var(--text-secondary);
+}
+
+section.contact .contact-cards .contact-info .single-contact .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+section.contact .contact-cards .contact-info .single-contact .info span {
+  color: var(--text-white);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+section.contact .contact-cards .contact-info .single-contact .info a {
+  color: #a3a3a3;
+}
+
+section.contact .contact-cards .contact-info .single-contact .info a:hover {
+  color: #fff;
+}
+
+section.contact .contact-cards .contact-form {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  border-left: none;
+}
+
+section.contact .contact-cards .contact-form span {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 1.5px;
+}
+
+section.contact .contact-cards .contact-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+section.contact .contact-cards .contact-form form .credentials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+section.contact .contact-cards .contact-form form .credentials .field {
+  width: 100%;
+}
+
+section.contact .contact-cards .contact-form form .field {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1.3px;
+  outline: none;
+  border: 1px solid #a3a3a3;
+  background-color: transparent;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.925);
+}
+
+section.contact .contact-cards .contact-form form .static {
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -498,5 +624,17 @@ section.testimonial .cards-list .single-card .social i:hover {
   section.testimonial .cards-list {
     width: 85%;
     padding: 10px 0;
+  }
+
+  section.contact .contact-cards {
+    width: 80%;
+  }
+
+  section.contact .contact-cards .contact-form form .credentials {
+    flex-direction: row;
+  }
+  section.contact .contact-cards .contact-form {
+    width: 500px;
+    border-left: 2px solid #a3a3a3;
   }
 }
