@@ -48,6 +48,19 @@ const works = [
     title: "Project 8",
     text: "I can help you build a product , feature or website Look through some of my work and experience! . I can help you build a product ,feature or website Look through some of my work and experience!",
   },
+  
+
+  {
+    id: WorkId(),
+    title: "Project 9",
+    text: "I can help you build a product , feature or website Look through some of my work and experience! . I can help you build a product ,feature or website Look through some of my work and experience!",
+  },
+
+  {
+    id: WorkId(),
+    title: "Project 10",
+    text: "I can help you build a product , feature or website Look through some of my work and experience! . I can help you build a product ,feature or website Look through some of my work and experience!",
+  }
 ];
 
 export default works;
