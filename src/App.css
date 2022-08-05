@@ -433,6 +433,7 @@ section.testimonial .cards-list .single-card .social i:hover {
 }
 
 section.contact {
+  height: auto;
   background-color: #070924;
   display: flex;
   flex-direction: column;
@@ -559,6 +560,38 @@ section.contact .contact-cards .contact-form form .static {
   width: 100%;
 }
 
+section.footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #a3a3a3;
+}
+
+section.footer .social {
+  padding: 10px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  border-bottom: 1px solid #a3a3a3c9;
+}
+
+section.footer .social a {
+  font-size: 15px;
+}
+
+section.footer span {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
 @media screen and (min-width: 768px) {
   /* Header */
 
@@ -636,5 +669,9 @@ section.contact .contact-cards .contact-form form .static {
   section.contact .contact-cards .contact-form {
     width: 500px;
     border-left: 2px solid #a3a3a3;
+  }
+
+  section.footer .social {
+    padding: 20px 0;
   }
 }
