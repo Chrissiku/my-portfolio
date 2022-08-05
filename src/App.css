@@ -471,8 +471,8 @@ section.contact .contact-cards .contact-info .single-contact {
 section.contact .contact-cards .contact-info .single-contact i {
   color: var(--text-secondary);
   border: 3px solid yellow;
-  padding: 10px;
-  border-radius: 50px;
+  padding: 6px 8px;
+  border-radius: 50%;
   transition: all 0.5s;
 }
 
@@ -490,13 +490,14 @@ section.contact .contact-cards .contact-info .single-contact .info {
 
 section.contact .contact-cards .contact-info .single-contact .info span {
   color: var(--text-white);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 1.3px;
 }
 
 section.contact .contact-cards .contact-info .single-contact .info a {
   color: #a3a3a3;
+  font-size: 14px;
 }
 
 section.contact .contact-cards .contact-info .single-contact .info a:hover {

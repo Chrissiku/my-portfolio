@@ -5,7 +5,7 @@ import icon from "../Home/Icon";
 
 const Testimonial = () => {
   let config = {
-    num: [4, 7],
+    num: [4, 4],
     rps: 0.1,
     radius: [5, 40],
     life: [1.5, 3],
