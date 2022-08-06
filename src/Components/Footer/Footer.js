@@ -5,8 +5,7 @@ import ParticlesBg from "particles-bg";
 const Footer = () => {
   return (
     <>
-      <section className="footer">
-        <ParticlesBg num={20} type="cobweb" bg={true} color="#0ab4e7"/>
+      <div className="footer">
         <div className="social">
           <Icon icon={thLarge} size={20} />
           <Icon icon={thLarge} size={20} />
@@ -14,10 +13,11 @@ const Footer = () => {
           <Icon icon={thLarge} size={20} />
           <Icon icon={thLarge} size={20} />
           <Icon icon={thLarge} size={20} />
-          <a href="mailto:chrissik5@gmail.com">chrissik5@gmail.com</a>
         </div>
-        <span>&copy;All Right reserved | Chris Siku</span>
-      </section>
+        <div className="line"></div>
+        <span>2022 &copy; All Right reserved | Chris Siku</span>
+        <ParticlesBg num={20} type="cobweb" bg={true} color="#0ab4e7" />
+      </div>
     </>
   );
 };

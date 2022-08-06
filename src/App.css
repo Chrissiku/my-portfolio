@@ -553,16 +553,23 @@ section.contact .contact-cards .contact-form form .static {
 
 /* Footer section */
 
-section.footer {
+.footer {
   width: 100%;
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   color: #a3a3a3;
+  gap: 0.5rem;
+  padding: 15px 0;
 }
 
-section.footer .social {
-  padding: 10px 0;
+.footer .line {
+  border: 1px solid #a3a3a379;
+  width: 100%;
+}
+
+.footer .social {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -570,17 +577,11 @@ section.footer .social {
   align-items: center;
   gap: 0.8rem;
   width: 100%;
-  border-bottom: 1px solid #a3a3a3c9;
 }
 
-section.footer .social a {
-  font-size: 15px;
-}
-
-section.footer span {
+.footer span {
   width: 100%;
   text-align: center;
-  padding: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -662,9 +663,5 @@ section.footer span {
   section.contact .contact-cards .contact-form {
     width: 500px;
     border-left: 2px solid #a3a3a3;
-  }
-
-  section.footer .social {
-    padding: 20px 0;
   }
 }
