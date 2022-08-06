@@ -36,7 +36,10 @@ const Work = () => {
           {works.slice(0, visible).map((work) => (
             <div className="single-work" key={work.id}>
               <div className="work-img">
-                <img src={work_img} alt="work title" />
+                <img
+                  src="https://cdn.pixabay.com/photo/2016/06/25/13/00/purse-1478852__340.jpg"
+                  alt="work title"
+                />
               </div>
               <h2 className="work-title">{work.title}</h2>
               <p>
