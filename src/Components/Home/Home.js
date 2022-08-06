@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import ParticlesBg from "particles-bg";
 import icon from "./Icon";
 const Home = () => {

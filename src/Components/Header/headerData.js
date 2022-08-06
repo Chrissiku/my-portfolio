@@ -11,21 +11,21 @@ const linksArray = [
     id: menuId(),
     menu: "Home",
     path: "/",
-    component: "#work",
+    component: "home",
     icon: <Icon icon={home} size={ICON_SIZE} />,
   },
   {
     id: menuId(),
     menu: "About",
     path: "/",
-    component: "#work",
+    component: "about",
     icon: <Icon icon={user} size={ICON_SIZE} />,
   },
   {
     id: menuId(),
     menu: "Work",
     path: "/",
-    component: "#work",
+    component: "work",
     icon: <Icon icon={home} size={ICON_SIZE} />,
   },
 
@@ -33,7 +33,7 @@ const linksArray = [
     id: menuId(),
     menu: "contact",
     path: "/",
-    component: "#work",
+    component: "contact",
     icon: <Icon icon={home} size={ICON_SIZE} />,
   },
 
@@ -41,7 +41,7 @@ const linksArray = [
     id: menuId(),
     menu: "testimonial",
     path: "/",
-    component: "#work",
+    component: "testimonial",
     icon: <Icon icon={home} size={ICON_SIZE} />,
   },
 ];
