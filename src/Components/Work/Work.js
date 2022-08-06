@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import work_img from "../../Images/face_co.svg";
 import works from "./WorkData";
 
 const Work = () => {

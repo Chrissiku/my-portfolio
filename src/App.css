@@ -12,12 +12,10 @@
 
 :root {
   --bg-dark-color: #020858;
-  /* --bg-dark-color: #020858; */
   --bg-even-section: #010c3fec;
-  /* --bg-even-section: #070924; */
   --text-white: #fff;
   --text-primary: #0a4eff;
-  --text-secondary: #5856d1;
+  --text-secondary: #fdae05;
   --font-family: "Poppins", sans-serif;
 }
 
@@ -59,9 +57,9 @@ header {
 }
 
 header .logo {
-  color: var(--text-white);
+  color: var(--text-secondary);
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 800;
   letter-spacing: 1.5px;
   transform: all 0.5s;
 }
@@ -102,15 +100,38 @@ header nav ul li {
   align-items: center;
   border: 1px solid var(--text-white);
   padding: 5px;
-  width: 75px;
-  height: 75px;
+  width: 77px;
+  height: 77px;
   border-radius: 10px;
+  transition: all 0.5s;
+}
+
+header nav ul li:hover,
+header nav ul li:hover.active {
+  color: var(--text-secondary);
+  border: 2px solid var(--text-secondary);
+  background-color: rgb(3, 3, 85);
 }
 
 header nav ul li span,
 .social a {
   font-size: 0.7rem;
   color: var(--text-white);
+}
+
+header nav ul .button .cv {
+  background-color: #059c05;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.3px;
+  font-weight: 600;
+  color: var(--text-white);
+  border: 2px solid #059c05;
+}
+
+header nav ul .button .cv:hover {
+  background-color: #05b405;
+  border: 2px solid #fdae05;
 }
 
 header .menu-icon {
@@ -147,7 +168,7 @@ section {
 }
 
 section.home {
-  height: calc(100vh - 55px);
+  height: calc(100vh - 62px);
   justify-content: center;
   padding: 0 10px;
   background-color: var(--bg-even-section);
@@ -588,6 +609,14 @@ section.contact .contact-cards .contact-form form .static {
     justify-content: space-evenly;
   }
 
+  header .logo {
+    color: var(--text-secondary);
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    transform: all 0.5s;
+  }
+
   header nav {
     position: relative;
     transform: none;
@@ -607,6 +636,23 @@ section.contact .contact-cards .contact-form form .static {
     flex-wrap: nowrap;
     align-items: center;
     color: var(--text-white);
+  }
+
+  header nav ul li:hover,
+  header nav ul li:hover.active {
+    border: none;
+    background: none;
+  }
+
+  header nav ul li span {
+    transition: all 0.5s;
+  }
+
+  header nav ul li span:hover,
+  header nav ul li span.active {
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-underline-offset: 23px;
   }
 
   header nav ul .button {

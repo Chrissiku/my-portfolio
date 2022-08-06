@@ -27,23 +27,19 @@ const Header = () => {
               </Link>
             ))}
             {socialArray.map((socialItem) => (
-              <li onClick={toggleNavbar} key={socialItem.id} className="social">
-                <i>{socialItem.icon}</i>
+              <li key={socialItem.id} onClick={toggleNavbar} className="social">
+                <a href={socialItem.link} target="_blank" rel="noreferrer">
+                  <i>{socialItem.icon}</i>
+                </a>
                 <a href={socialItem.link} target="_blank" rel="noreferrer">
                   {socialItem.network}
                 </a>
               </li>
             ))}
-
             <div className="button">
-              <button type="button" className="btn">
+              <a href="/" rel="noreferrer" className="btn cv">
                 Download CV
-              </button>
-            </div>
-            <div className="button">
-              <button type="button" className="btn">
-                Download CV
-              </button>
+              </a>
             </div>
           </ul>
           <button
