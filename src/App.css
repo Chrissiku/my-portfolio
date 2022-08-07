@@ -512,26 +512,33 @@ section.contact .contact-cards .contact-info {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 0.5rem;
 }
 
 section.contact .contact-cards .contact-info .single-contact {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  padding: 10px;
+  width: 250px;
   gap: 0.5rem;
 }
 
+section.contact .contact-cards .contact-info .single-contact:hover {
+  /* background-color: var(--text-primary); */
+  cursor: pointer;
+}
+
 section.contact .contact-cards .contact-info .single-contact i {
-  color: var(--text-secondary);
-  border: 3px solid yellow;
-  padding: 6px 8px;
-  border-radius: 50%;
+  color: var(--text-white);
+  border: 3px solid var(--text-primary);
+  padding: 5.5px 8px;
+  border-radius: 50px;
   transition: all 0.5s;
 }
 
 section.contact .contact-cards .contact-info .single-contact:hover > i {
-  color: yellow;
+  color: var(--text-primary);
   border: 3px solid var(--text-secondary);
 }
 
@@ -549,12 +556,18 @@ section.contact .contact-cards .contact-info .single-contact .info span {
   letter-spacing: 1.3px;
 }
 
-section.contact .contact-cards .contact-info .single-contact .info a {
+section.contact .contact-cards .contact-info .single-contact .info .detail {
   color: #a3a3a3;
   font-size: 14px;
+  font-weight: 300;
 }
 
-section.contact .contact-cards .contact-info .single-contact .info a:hover {
+section.contact
+  .contact-cards
+  .contact-info
+  .single-contact
+  .info
+  .detail:hover {
   color: #fff;
 }
 
@@ -570,7 +583,7 @@ section.contact .contact-cards .contact-form {
 }
 
 section.contact .contact-cards .contact-form span {
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-size: 16px;
   font-weight: 500;
   line-height: 25px;
@@ -613,6 +626,15 @@ section.contact .contact-cards .contact-form form .field {
 
 section.contact .contact-cards .contact-form form .static {
   width: 100%;
+}
+
+section.contact .contact-cards .contact-form button {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 1rem;
 }
 
 /* Footer section */
