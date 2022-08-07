@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import work_img from "../../Images/face_co.svg";
-import works from "./WorkData";
+import { works } from "./WorkData";
+import Icon from "react-icons-kit";
+import { arrowUp } from "react-icons-kit/fa/arrowUp";
+import { arrowDown } from "react-icons-kit/fa/arrowDown";
 
 const Work = () => {
   const [visible, setVisible] = useState(6);
@@ -14,20 +16,23 @@ const Work = () => {
   };
 
   const LoadMore = () => {
-    if (visible === works.length) {
-      return (
-        <button type="button" className="btn" onClick={showLess}>
-          Show Less
-        </button>
-      );
-    } else {
-      return (
-        <button type="button" className="btn" onClick={showMore}>
-          Show More
-        </button>
-      );
+    if (works.length > 6) {
+      if (visible === works.length) {
+        return (
+          <button type="button" className="btn" onClick={showLess}>
+            Show Less <Icon icon={arrowUp} size={15} />
+          </button>
+        );
+      } else {
+        return (
+          <button type="button" className="btn" onClick={showMore}>
+            Show More <Icon icon={arrowDown} size={15} />
+          </button>
+        );
+      }
     }
   };
+
   return (
     <>
       <section className="work" id="work">
@@ -36,16 +41,13 @@ const Work = () => {
           {works.slice(0, visible).map((work) => (
             <div className="single-work" key={work.id}>
               <div className="work-img">
-                <img
-                  src="https://cdn.pixabay.com/photo/2016/06/25/13/00/purse-1478852__340.jpg"
-                  alt="work title"
-                />
+                <img src={work.image} alt={work.title} />
               </div>
               <h2 className="work-title">{work.title}</h2>
               <p>
                 {work.text.substring(0, 90)}
                 {" . . . "}
-                <a className="read-more" href="true">
+                <a className="read-more" href="/">
                   Read more
                 </a>
               </p>

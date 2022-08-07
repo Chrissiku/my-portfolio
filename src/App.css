@@ -12,12 +12,10 @@
 
 :root {
   --bg-dark-color: #020858;
-  /* --bg-dark-color: #020858; */
   --bg-even-section: #010c3fec;
-  /* --bg-even-section: #070924; */
   --text-white: #fff;
   --text-primary: #0a4eff;
-  --text-secondary: #5856d1;
+  --text-secondary: #fdae05;
   --font-family: "Poppins", sans-serif;
 }
 
@@ -32,15 +30,33 @@ body {
   user-select: none;
 }
 
+::-webkit-scrollbar {
+  background-color: var(--text-primary);
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-secondary);
+}
+
 .btn {
+  background-color: var(--text-primary);
+  color: #fff;
   outline: none;
-  border: none;
+  border: 2px solid var(--text-white);
   padding: 8px 18px;
   font-size: 0.8rem;
   font-weight: 500;
   border-radius: 8px;
   transition: all 0.5s;
   cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--bg-dark-color);
+  color: #fff;
+  transition: all 0.5s;
+  border: 2px solid var(--text-secondary);
 }
 
 /* Header */
@@ -59,9 +75,9 @@ header {
 }
 
 header .logo {
-  color: var(--text-white);
+  color: var(--text-secondary);
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 800;
   letter-spacing: 1.5px;
   transform: all 0.5s;
 }
@@ -102,15 +118,38 @@ header nav ul li {
   align-items: center;
   border: 1px solid var(--text-white);
   padding: 5px;
-  width: 75px;
-  height: 75px;
+  width: 77px;
+  height: 77px;
   border-radius: 10px;
+  transition: all 0.5s;
+}
+
+header nav ul a:hover > li,
+header nav ul a.active > li {
+  color: var(--text-secondary);
+  border: 2px solid var(--text-secondary);
+  background-color: rgb(3, 3, 85);
 }
 
 header nav ul li span,
 .social a {
   font-size: 0.7rem;
   color: var(--text-white);
+}
+
+.cv {
+  background-color: #059c05;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.3px;
+  font-weight: 600;
+  color: var(--text-white);
+  border: 2px solid #059c05;
+}
+
+.cv:hover {
+  background-color: #05b405;
+  border: 2px solid #fdae05;
 }
 
 header .menu-icon {
@@ -136,7 +175,7 @@ header .mobile-nav {
 /* Home section */
 section {
   height: auto;
-  margin-top: 55px;
+  margin-top: 50px;
   z-index: 1;
   position: relative;
   display: flex;
@@ -147,7 +186,7 @@ section {
 }
 
 section.home {
-  height: calc(100vh - 55px);
+  height: calc(100vh - 50px);
   justify-content: center;
   padding: 0 10px;
   background-color: var(--bg-even-section);
@@ -156,20 +195,21 @@ section.home {
 
 section.home .dev-info h1 {
   color: var(--text-white);
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 700;
   letter-spacing: 1.5px;
 }
 
 section.home .dev-info h2 {
   color: var(--text-secondary);
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 1.5px;
 }
 
 section.home p {
   max-width: 600px;
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.733);
 }
 
@@ -181,7 +221,9 @@ section.home .buttons {
 }
 
 section.home .buttons button {
-  width: 125px;
+  width: 200px;
+  font-weight: 600;
+  border: 2px solid;
 }
 
 /* About Section */
@@ -222,11 +264,11 @@ section.about .about-info .about-img {
 section.about .about-info .about-img img {
   width: 100%;
   -webkit-filter: grayscale(0.5);
-  filter: grayscale(0.5);
+  filter: grayscale(1);
   transition: all 1s;
 }
 
-section.about .about-info .about-img img:hover {
+section.about:hover > .about-info .about-img img {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
   transform: scale(1.3);
@@ -240,7 +282,7 @@ section.about .about-text {
 }
 
 section.about .about-text h3 {
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-size: 22px;
 }
 
@@ -273,16 +315,16 @@ section.about .skills .sills-list .single-skill {
   text-align: center;
   padding: 10px;
   border-radius: 20px;
-  border: 1px solid var(--text-primary);
+  border: 3px solid var(--text-primary);
+  transition: all 0.5s;
 }
 
-section.about .skills .sills-list .single-skill:nth-child(even) {
-  background-color: var(--bg-dark-color);
-  border: 1px solid var(--text-primary);
+section.about .skills .sills-list .single-skill:hover {
+  border: 3px solid var(--text-secondary);
 }
 
 section.about .skills .sills-list .single-skill i {
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 section.about .skills .sills-list .single-skill p {
@@ -342,14 +384,27 @@ section.work .works-list .single-work p {
 
 section.work .works-list .single-work p .read-more {
   color: #000;
-  font-size: 12px;
+  font-size: 14px;
+  border: 2px solid var(--text-primary);
   background-color: #a3a3a3;
-  padding: 2px 5px;
+  padding: 2px 10px;
   border-radius: 5px;
+  transition: all 0.3s;
 }
 
 section.work .works-list .single-work p .read-more:hover {
-  background-color: #fff;
+  background-color: var(--text-primary);
+  border: 2px solid var(--text-secondary);
+  color: var(--text-white);
+}
+
+section.work button {
+  width: 200px;
+}
+
+section.work button i {
+  color: var(--text-secondary);
+  margin-left: 10px;
 }
 
 /* testimonial section */
@@ -379,18 +434,20 @@ section.testimonial .cards-list .single-card {
 }
 
 section.testimonial .cards-list .single-card:hover {
-  background-color: #050a4e;
+  background-color: #030636;
 }
 
 section.testimonial .cards-list .single-card .img img {
   width: 100px;
+  transform: scale(1.2);
   border: 3px solid var(--text-primary);
   border-radius: 50px;
-  padding: 10px;
+  padding: 2px;
 }
 
 section.testimonial .cards-list .single-card h4 {
   color: var(--text-white);
+  text-align: center;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 1.2px;
@@ -400,6 +457,16 @@ section.testimonial .cards-list .single-card p {
   color: #a3a3a3;
   font-size: 15px;
   text-align: center;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+section.testimonial .cards-list .single-card p::-webkit-scrollbar {
+  background-color: var(--bg-dark-color);
+  width: 5px;
+}
+section.testimonial .cards-list .single-card p::-webkit-scrollbar-thumb {
+  background-color: var(--text-primary);
 }
 
 section.testimonial .cards-list .single-card .social {
@@ -412,15 +479,15 @@ section.testimonial .cards-list .single-card .social {
 
 section.testimonial .cards-list .single-card .social i {
   color: #fff;
-  border: 1px solid var(--text-primary);
+  border: 2px solid var(--text-secondary);
   border-radius: 08px;
   padding: 5px;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 section.testimonial .cards-list .single-card .social i:hover {
-  color: rgba(0, 128, 0, 0.562);
-  border: 1px solid blue;
+  color: var(--text-secondary);
+  border: 2px solid var(--text-primary);
 }
 
 /* Contact section */
@@ -445,26 +512,33 @@ section.contact .contact-cards .contact-info {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 0.5rem;
 }
 
 section.contact .contact-cards .contact-info .single-contact {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  padding: 10px;
+  width: 250px;
   gap: 0.5rem;
 }
 
+section.contact .contact-cards .contact-info .single-contact:hover {
+  /* background-color: var(--text-primary); */
+  cursor: pointer;
+}
+
 section.contact .contact-cards .contact-info .single-contact i {
-  color: var(--text-secondary);
-  border: 3px solid yellow;
-  padding: 6px 8px;
-  border-radius: 50%;
+  color: var(--text-white);
+  border: 3px solid var(--text-primary);
+  padding: 5.5px 8px;
+  border-radius: 50px;
   transition: all 0.5s;
 }
 
 section.contact .contact-cards .contact-info .single-contact:hover > i {
-  color: yellow;
+  color: var(--text-primary);
   border: 3px solid var(--text-secondary);
 }
 
@@ -482,12 +556,18 @@ section.contact .contact-cards .contact-info .single-contact .info span {
   letter-spacing: 1.3px;
 }
 
-section.contact .contact-cards .contact-info .single-contact .info a {
+section.contact .contact-cards .contact-info .single-contact .info .detail {
   color: #a3a3a3;
   font-size: 14px;
+  font-weight: 300;
 }
 
-section.contact .contact-cards .contact-info .single-contact .info a:hover {
+section.contact
+  .contact-cards
+  .contact-info
+  .single-contact
+  .info
+  .detail:hover {
   color: #fff;
 }
 
@@ -503,7 +583,7 @@ section.contact .contact-cards .contact-form {
 }
 
 section.contact .contact-cards .contact-form span {
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-size: 16px;
   font-weight: 500;
   line-height: 25px;
@@ -548,6 +628,15 @@ section.contact .contact-cards .contact-form form .static {
   width: 100%;
 }
 
+section.contact .contact-cards .contact-form button {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 1rem;
+}
+
 /* Footer section */
 
 .footer {
@@ -572,7 +661,7 @@ section.contact .contact-cards .contact-form form .static {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1rem;
   width: 100%;
 }
 
@@ -581,11 +670,27 @@ section.contact .contact-cards .contact-form form .static {
   text-align: center;
 }
 
+.footer a {
+  cursor: pointer;
+}
+
+.footer a:hover > i {
+  color: var(--text-secondary);
+}
+
 @media screen and (min-width: 768px) {
   /* Header */
 
   header {
     justify-content: space-evenly;
+  }
+
+  header .logo {
+    color: var(--text-secondary);
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    transform: all 0.5s;
   }
 
   header nav {
@@ -607,6 +712,23 @@ section.contact .contact-cards .contact-form form .static {
     flex-wrap: nowrap;
     align-items: center;
     color: var(--text-white);
+  }
+
+  header nav ul a:hover > li,
+  header nav ul a.active > li {
+    border: none;
+    background: none;
+  }
+
+  header nav ul a {
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    transition: all 0.5s;
+  }
+
+  header nav ul a:hover,
+  header nav ul a.active {
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--text-secondary);
   }
 
   header nav ul .button {
@@ -637,6 +759,22 @@ section.contact .contact-cards .contact-form form .static {
     position: absolute;
     visibility: hidden;
     opacity: 0;
+  }
+
+  /* Home section */
+
+  section.home .dev-info h1 {
+    font-size: 40px;
+  }
+
+  section.home .dev-info h2 {
+    font-size: 25px;
+  }
+
+  section.home p {
+    max-width: 600px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.733);
   }
 
   /* About section */

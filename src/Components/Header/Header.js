@@ -1,15 +1,18 @@
+import React from "react";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import Icon from "react-icons-kit";
 import { linksArray, socialArray } from "./headerData";
 import { thLarge } from "react-icons-kit/fa/thLarge";
 import { close } from "react-icons-kit/fa/close";
 
-const Header = () => {
+const Header = ({ menu }) => {
   const navigationRef = useRef();
   const toggleNavbar = () => {
     navigationRef.current.classList.toggle("mobile-nav");
   };
+
   return (
     <>
       <header>
@@ -19,31 +22,35 @@ const Header = () => {
         <nav ref={navigationRef}>
           <ul>
             {linksArray.map((menuItem) => (
-              <Link to={menuItem.path} key={menuItem.id}>
-                <li onClick={toggleNavbar}>
+              <Link
+                key={menuItem.id}
+                to={menuItem.component}
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={10}
+                activeClass="active"
+              >
+                <li onClick={toggleNavbar} ref={menu}>
                   <i>{menuItem.icon}</i>
                   <span>{menuItem.menu}</span>
                 </li>
               </Link>
             ))}
             {socialArray.map((socialItem) => (
-              <li onClick={toggleNavbar} key={socialItem.id} className="social">
-                <i>{socialItem.icon}</i>
+              <li key={socialItem.id} onClick={toggleNavbar} className="social">
+                <a href={socialItem.link} target="_blank" rel="noreferrer">
+                  <i>{socialItem.icon}</i>
+                </a>
                 <a href={socialItem.link} target="_blank" rel="noreferrer">
                   {socialItem.network}
                 </a>
               </li>
             ))}
-
             <div className="button">
-              <button type="button" className="btn">
+              <a href="/" rel="noreferrer" className="btn cv">
                 Download CV
-              </button>
-            </div>
-            <div className="button">
-              <button type="button" className="btn">
-                Download CV
-              </button>
+              </a>
             </div>
           </ul>
           <button
