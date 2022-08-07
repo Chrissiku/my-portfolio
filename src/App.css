@@ -31,14 +31,23 @@ body {
 }
 
 .btn {
+  background-color: var(--text-primary);
+  color: #fff;
   outline: none;
-  border: none;
+  border: 2px solid var(--text-white);
   padding: 8px 18px;
   font-size: 0.8rem;
   font-weight: 500;
   border-radius: 8px;
   transition: all 0.5s;
   cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--bg-dark-color);
+  color: #fff;
+  transition: all 0.5s;
+  border: 2px solid var(--text-secondary);
 }
 
 /* Header */
@@ -119,7 +128,7 @@ header nav ul li span,
   color: var(--text-white);
 }
 
-header nav ul .button .cv {
+.cv {
   background-color: #059c05;
   font-size: 14px;
   line-height: 20px;
@@ -129,7 +138,7 @@ header nav ul .button .cv {
   border: 2px solid #059c05;
 }
 
-header nav ul .button .cv:hover {
+.cv:hover {
   background-color: #05b405;
   border: 2px solid #fdae05;
 }
@@ -205,22 +214,8 @@ section.home .buttons {
 section.home .buttons button {
   width: 200px;
   font-weight: 600;
-  border: 2px solid ;
+  border: 2px solid;
 }
-
-section.home .contact-btn {
-  background-color: var(--text-primary);
-  color: #fff;
-  transition: all 0.5s;
-}
-
-section.home .contact-btn:hover{
-  background-color: #059c05;
-  color: #fff;
-  transition: all 0.5s;
-  border: 2px solid var(--text-secondary);
-}
-
 
 /* About Section */
 
@@ -260,11 +255,11 @@ section.about .about-info .about-img {
 section.about .about-info .about-img img {
   width: 100%;
   -webkit-filter: grayscale(0.5);
-  filter: grayscale(0.5);
+  filter: grayscale(1);
   transition: all 1s;
 }
 
-section.about .about-info .about-img img:hover {
+section.about:hover > .about-info .about-img img {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
   transform: scale(1.3);
@@ -278,7 +273,7 @@ section.about .about-text {
 }
 
 section.about .about-text h3 {
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-size: 22px;
 }
 
@@ -311,16 +306,16 @@ section.about .skills .sills-list .single-skill {
   text-align: center;
   padding: 10px;
   border-radius: 20px;
-  border: 1px solid var(--text-primary);
+  border: 3px solid var(--text-primary);
+  transition: all 0.5s;
 }
 
-section.about .skills .sills-list .single-skill:nth-child(even) {
-  background-color: var(--bg-dark-color);
-  border: 1px solid var(--text-primary);
+section.about .skills .sills-list .single-skill:hover{
+  border: 3px solid var(--text-secondary);
 }
 
 section.about .skills .sills-list .single-skill i {
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 section.about .skills .sills-list .single-skill p {
