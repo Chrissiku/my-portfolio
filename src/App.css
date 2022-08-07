@@ -203,8 +203,24 @@ section.home .buttons {
 }
 
 section.home .buttons button {
-  width: 125px;
+  width: 200px;
+  font-weight: 600;
+  border: 2px solid ;
 }
+
+section.home .contact-btn {
+  background-color: var(--text-primary);
+  color: #fff;
+  transition: all 0.5s;
+}
+
+section.home .contact-btn:hover{
+  background-color: #059c05;
+  color: #fff;
+  transition: all 0.5s;
+  border: 2px solid var(--text-secondary);
+}
+
 
 /* About Section */
 

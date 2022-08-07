@@ -43,13 +43,13 @@ const Home = () => {
             duration={1000}
             delay={100}
           >
-            <button type="button" className="btn">
-              Contact
+            <button type="button" className="btn contact-btn">
+              Contact Me
             </button>
           </Link>
-          <button type="button" className="btn">
+          {/* <button type="button" className="btn cv">
             Download Cv
-          </button>
+          </button> */}
         </div>
       </section>
     </>
