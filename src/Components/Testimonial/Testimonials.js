@@ -20,7 +20,7 @@ const Testimonial = () => {
   };
   return (
     <>
-      <section className="testimonial">
+      <section className="testimonial" id="testimonial">
         <h2 className="title">Testimonial</h2>
         <TestimonyCards />
         <ParticlesBg type="custom" config={config} bg={true} />

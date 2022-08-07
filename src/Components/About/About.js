@@ -6,7 +6,7 @@ import { gears } from "react-icons-kit/fa/gears";
 const About = () => {
   return (
     <>
-      <section className="about">
+      <section className="about" id="about">
         <h2 className="title">About</h2>
         <div className="about-info">
           <div className="about-img">

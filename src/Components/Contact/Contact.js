@@ -21,7 +21,7 @@ const Contact = () => {
   };
   return (
     <>
-      <section className="contact">
+      <section className="contact" id="contact">
         <ParticlesBg type="custom" config={config} bg={true} />
         <h2 className="title">Contact</h2>
         <div className="contact-cards">

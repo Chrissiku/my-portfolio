@@ -106,8 +106,8 @@ header nav ul li {
   transition: all 0.5s;
 }
 
-header nav ul li:hover,
-header nav ul li:hover.active {
+header nav ul a:hover > li,
+header nav ul a.active > li {
   color: var(--text-secondary);
   border: 2px solid var(--text-secondary);
   background-color: rgb(3, 3, 85);
@@ -157,7 +157,7 @@ header .mobile-nav {
 /* Home section */
 section {
   height: auto;
-  margin-top: 55px;
+  margin-top: 50px;
   z-index: 1;
   position: relative;
   display: flex;
@@ -168,7 +168,7 @@ section {
 }
 
 section.home {
-  height: calc(100vh - 62px);
+  height: calc(100vh - 50px);
   justify-content: center;
   padding: 0 10px;
   background-color: var(--bg-even-section);
@@ -177,20 +177,21 @@ section.home {
 
 section.home .dev-info h1 {
   color: var(--text-white);
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 700;
   letter-spacing: 1.5px;
 }
 
 section.home .dev-info h2 {
   color: var(--text-secondary);
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 1.5px;
 }
 
 section.home p {
   max-width: 600px;
+  font-size: 15px;
   color: rgba(255, 255, 255, 0.733);
 }
 
@@ -638,21 +639,21 @@ section.contact .contact-cards .contact-form form .static {
     color: var(--text-white);
   }
 
-  header nav ul li:hover,
-  header nav ul li:hover.active {
+  header nav ul a:hover > li,
+  header nav ul a.active > li {
     border: none;
     background: none;
   }
 
-  header nav ul li span {
+  header nav ul a {
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
     transition: all 0.5s;
   }
 
-  header nav ul li span:hover,
-  header nav ul li span.active {
+  header nav ul a:hover,
+  header nav ul a.active {
     color: var(--text-secondary);
-    text-decoration: underline;
-    text-underline-offset: 23px;
+    border-bottom: 2px solid var(--text-secondary);
   }
 
   header nav ul .button {
@@ -683,6 +684,22 @@ section.contact .contact-cards .contact-form form .static {
     position: absolute;
     visibility: hidden;
     opacity: 0;
+  }
+
+  /* Home section */
+
+  section.home .dev-info h1 {
+    font-size: 40px;
+  }
+
+  section.home .dev-info h2 {
+    font-size: 25px;
+  }
+
+  section.home p {
+    max-width: 600px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.733);
   }
 
   /* About section */
