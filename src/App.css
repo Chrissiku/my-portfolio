@@ -661,13 +661,21 @@ section.contact .contact-cards .contact-form button {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1rem;
   width: 100%;
 }
 
 .footer span {
   width: 100%;
   text-align: center;
+}
+
+.footer a {
+  cursor: pointer;
+}
+
+.footer a:hover > i {
+  color: var(--text-secondary);
 }
 
 @media screen and (min-width: 768px) {

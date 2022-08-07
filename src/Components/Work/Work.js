@@ -47,7 +47,7 @@ const Work = () => {
               <p>
                 {work.text.substring(0, 90)}
                 {" . . . "}
-                <a className="read-more" href="true">
+                <a className="read-more" href="/">
                   Read more
                 </a>
               </p>
