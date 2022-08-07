@@ -310,7 +310,7 @@ section.about .skills .sills-list .single-skill {
   transition: all 0.5s;
 }
 
-section.about .skills .sills-list .single-skill:hover{
+section.about .skills .sills-list .single-skill:hover {
   border: 3px solid var(--text-secondary);
 }
 
@@ -375,14 +375,27 @@ section.work .works-list .single-work p {
 
 section.work .works-list .single-work p .read-more {
   color: #000;
-  font-size: 12px;
+  font-size: 14px;
+  border: 2px solid var(--text-primary);
   background-color: #a3a3a3;
-  padding: 2px 5px;
+  padding: 2px 10px;
   border-radius: 5px;
+  transition: all 0.3s;
 }
 
 section.work .works-list .single-work p .read-more:hover {
-  background-color: #fff;
+  background-color: var(--text-primary);
+  border: 2px solid var(--text-secondary);
+  color: var(--text-white);
+}
+
+section.work button {
+  width: 200px;
+}
+
+section.work button i {
+  color: var(--text-secondary);
+  margin-left: 10px;
 }
 
 /* testimonial section */
