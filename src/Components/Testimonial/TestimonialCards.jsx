@@ -1,10 +1,8 @@
 import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Icon from "react-icons-kit";
-import { thLarge } from "react-icons-kit/fa/thLarge";
-import Author from "../../Images/face_co.svg";
 import Slider from "react-slick";
+import { TestimonialData } from "./testimonialData";
 
 const TestimonyCards = () => {
   const settings = {
@@ -45,96 +43,30 @@ const TestimonyCards = () => {
   return (
     <div className="cards-list">
       <Slider {...settings}>
-        <div className="slider">
-          <div className="single-card">
-            <div className="img">
-              <img src={Author} alt="author" />
-            </div>
-            <h4>Author name</h4>
-            <p>
-              I can help you build a product , feature or website Look through
-              some of my work and experience! If you like what you see and.
-            </p>
-            <div className="social">
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
-            </div>
-          </div>
-        </div>
-        <div className="slider">
-          <div className="single-card">
-            <div className="img">
-              <img src={Author} alt="author" />
-            </div>
-            <h4>Author name</h4>
-            <p>
-              I can help you build a product , feature or website Look through
-              some of my work and experience! If you like what you see and.
-            </p>
-            <div className="social">
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
+        {TestimonialData.map((testimonial) => (
+          <div className="slider" key={testimonial.id}>
+            <div className="single-card">
+              <div className="img">
+                <img src={testimonial.picture} alt={testimonial.name} />
+              </div>
+              <h4>{testimonial.name}</h4>
+              <p>{testimonial.recomandation}</p>
+              <div className="social">
+                {testimonial.social.map((social) => (
+                  <a
+                    href={social.mediaLink}
+                    target="_blanc"
+                    noreferrer="true"
+                    key={social.id}
+                    className={social.class}
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="slider">
-          <div className="single-card">
-            <div className="img">
-              <img src={Author} alt="author" />
-            </div>
-            <h4>Author name</h4>
-            <p>
-              I can help you build a product , feature or website Look through
-              some of my work and experience! If you like what you see and.
-            </p>
-            <div className="social">
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
-            </div>
-          </div>
-        </div>
-        <div className="slider">
-          <div className="single-card">
-            <div className="img">
-              <img src={Author} alt="author" />
-            </div>
-            <h4>Author name</h4>
-            <p>
-              I can help you build a product , feature or website Look through
-              some of my work and experience! If you like what you see and.
-            </p>
-            <div className="social">
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
-            </div>
-          </div>
-        </div>
-        <div className="slider">
-          <div className="single-card">
-            <div className="img">
-              <img src={Author} alt="author" />
-            </div>
-            <h4>Author name</h4>
-            <p>
-              I can help you build a product , feature or website Look through
-              some of my work and experience! If you like what you see and.
-            </p>
-            <div className="social">
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
-              <Icon icon={thLarge} size={22} />
-            </div>
-          </div>
-        </div>
+        ))}
       </Slider>
     </div>
   );

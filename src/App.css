@@ -30,6 +30,15 @@ body {
   user-select: none;
 }
 
+::-webkit-scrollbar {
+  background-color: var(--text-primary);
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-secondary);
+}
+
 .btn {
   background-color: var(--text-primary);
   color: #fff;
@@ -425,18 +434,20 @@ section.testimonial .cards-list .single-card {
 }
 
 section.testimonial .cards-list .single-card:hover {
-  background-color: #050a4e;
+  background-color: #030636;
 }
 
 section.testimonial .cards-list .single-card .img img {
   width: 100px;
+  transform: scale(1.2);
   border: 3px solid var(--text-primary);
   border-radius: 50px;
-  padding: 10px;
+  padding: 2px;
 }
 
 section.testimonial .cards-list .single-card h4 {
   color: var(--text-white);
+  text-align: center;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 1.2px;
@@ -446,6 +457,16 @@ section.testimonial .cards-list .single-card p {
   color: #a3a3a3;
   font-size: 15px;
   text-align: center;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+section.testimonial .cards-list .single-card p::-webkit-scrollbar {
+  background-color: var(--bg-dark-color);
+  width: 5px;
+}
+section.testimonial .cards-list .single-card p::-webkit-scrollbar-thumb {
+  background-color: var(--text-primary);
 }
 
 section.testimonial .cards-list .single-card .social {
@@ -458,15 +479,15 @@ section.testimonial .cards-list .single-card .social {
 
 section.testimonial .cards-list .single-card .social i {
   color: #fff;
-  border: 1px solid var(--text-primary);
+  border: 2px solid var(--text-secondary);
   border-radius: 08px;
   padding: 5px;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 
 section.testimonial .cards-list .single-card .social i:hover {
-  color: rgba(0, 128, 0, 0.562);
-  border: 1px solid blue;
+  color: var(--text-secondary);
+  border: 2px solid var(--text-primary);
 }
 
 /* Contact section */
