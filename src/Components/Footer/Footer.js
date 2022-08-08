@@ -2,7 +2,7 @@ import { contactInfo } from '../Contact/contactInfo';
 
 const Footer = () => (
   <>
-    <div className="footer">
+    <footer id="footer">
       <div className="social">
         {contactInfo.map((contact) => (
           <a target="_blanc" key={contact.id} href={contact.value}>
@@ -12,7 +12,7 @@ const Footer = () => (
       </div>
       <div className="line" />
       <span>2022 &copy; All Right reserved | Chris Siku</span>
-    </div>
+    </footer>
   </>
 );
 
