@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { works } from "./WorkData";
-import Icon from "react-icons-kit";
-import { arrowUp } from "react-icons-kit/fa/arrowUp";
-import { arrowDown } from "react-icons-kit/fa/arrowDown";
+import React, { useState } from 'react';
+import Icon from 'react-icons-kit';
+import { arrowUp } from 'react-icons-kit/fa/arrowUp';
+import { arrowDown } from 'react-icons-kit/fa/arrowDown';
+import works from './WorkData';
 
 const Work = () => {
   const [visible, setVisible] = useState(6);
@@ -12,26 +12,29 @@ const Work = () => {
   };
 
   const showLess = () => {
-    setVisible((prev) => (prev = 6));
+    setVisible((prev) => prev === 6);
   };
 
-  const LoadMore = () => {
+  function LoadMore() {
     if (works.length > 6) {
       if (visible === works.length) {
         return (
           <button type="button" className="btn" onClick={showLess}>
-            Show Less <Icon icon={arrowUp} size={15} />
-          </button>
-        );
-      } else {
-        return (
-          <button type="button" className="btn" onClick={showMore}>
-            Show More <Icon icon={arrowDown} size={15} />
+            Show Less
+            {' '}
+            <Icon icon={arrowUp} size={15} />
           </button>
         );
       }
+      return (
+        <button type="button" className="btn" onClick={showMore}>
+          Show More
+          {' '}
+          <Icon icon={arrowDown} size={15} />
+        </button>
+      );
     }
-  };
+  }
 
   return (
     <>
@@ -46,7 +49,7 @@ const Work = () => {
               <h2 className="work-title">{work.title}</h2>
               <p>
                 {work.text.substring(0, 90)}
-                {" . . . "}
+                {' . . . '}
                 <a className="read-more" href="/">
                   Read more
                 </a>

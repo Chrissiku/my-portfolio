@@ -1,9 +1,10 @@
 // import React from "react";
-import ParticlesBg from "particles-bg";
-import { Link } from "react-scroll";
-import icon from "./Icon";
+import ParticlesBg from 'particles-bg';
+import { Link } from 'react-scroll';
+import icon from './Icon';
+
 const Home = () => {
-  let config = {
+  const config = {
     num: [1, 1],
     rps: 0.1,
     radius: [5, 40],
@@ -13,17 +14,17 @@ const Home = () => {
     alpha: [0.6, 0],
     scale: [0.1, 0.2],
     body: icon,
-    position: "all",
-    cross: "dead",
+    position: 'all',
+    cross: 'dead',
     random: 2,
   };
   return (
     <>
       <section className="home" id="home">
-        <ParticlesBg type="custom" config={config} bg={true} />
-        <ParticlesBg num={50} type="cobweb" bg={true} color="#0ab4e7" />
+        <ParticlesBg type="custom" config={config} bg />
+        <ParticlesBg num={50} type="cobweb" bg color="#0ab4e7" />
         <div className="dev-info">
-          <h1>Hi, I'm Chris Siku</h1>
+          <h1>Hi, I&apos; Chris Siku</h1>
           <h2>A Software Developer</h2>
         </div>
         <p>
@@ -37,8 +38,8 @@ const Home = () => {
         <div className="buttons">
           <Link
             to="contact"
-            spy={true}
-            smooth={true}
+            spy
+            smooth
             offset={-50}
             duration={1000}
             delay={100}

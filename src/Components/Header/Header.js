@@ -1,16 +1,16 @@
-import React from "react";
-import { useRef } from "react";
-// import { Link } from "react-router-dom";
-import { Link } from "react-scroll";
-import Icon from "react-icons-kit";
-import { linksArray, socialArray } from "./headerData";
-import { thLarge } from "react-icons-kit/fa/thLarge";
-import { close } from "react-icons-kit/fa/close";
+import React, { useRef } from 'react';
 
-const Header = ({ menu }) => {
+// import { Link } from "react-router-dom";
+import { Link } from 'react-scroll';
+import Icon from 'react-icons-kit';
+import { thLarge } from 'react-icons-kit/fa/thLarge';
+import { close } from 'react-icons-kit/fa/close';
+import { linksArray, socialArray } from './headerData';
+
+const Header = () => {
   const navigationRef = useRef();
   const toggleNavbar = () => {
-    navigationRef.current.classList.toggle("mobile-nav");
+    navigationRef.current.classList.toggle('mobile-nav');
   };
 
   return (
@@ -25,20 +25,20 @@ const Header = ({ menu }) => {
               <Link
                 key={menuItem.id}
                 to={menuItem.component}
-                spy={true}
-                smooth={true}
+                spy
+                smooth
                 offset={-50}
                 duration={10}
                 activeClass="active"
               >
-                <li onClick={toggleNavbar} ref={menu}>
+                <li onClick={toggleNavbar} aria-hidden="true">
                   <i>{menuItem.icon}</i>
                   <span>{menuItem.menu}</span>
                 </li>
               </Link>
             ))}
             {socialArray.map((socialItem) => (
-              <li key={socialItem.id} onClick={toggleNavbar} className="social">
+              <li key={socialItem.id} onClick={toggleNavbar} className="social" aria-hidden="true">
                 <a href={socialItem.link} target="_blank" rel="noreferrer">
                   <i>{socialItem.icon}</i>
                 </a>

@@ -37,6 +37,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--text-secondary);
+  border-radius: 50px;
 }
 
 .btn {
@@ -66,7 +67,7 @@ header {
   top: 0;
   width: 100%;
   padding: 10px 20px 10px 30px;
-  box-shadow: 0px 0px 1px #0615eb;
+  box-shadow: 0 0 1px #0615eb;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -352,7 +353,7 @@ section.work .works-list .single-work {
   align-items: center;
   gap: 0.5rem;
   padding: 0 0 10px 0;
-  box-shadow: #a3a3a3 0px 0px 2px 0px;
+  box-shadow: #a3a3a3 0 0 2px 0;
   border: 1px solid #a3a3a3;
 }
 
@@ -465,6 +466,7 @@ section.testimonial .cards-list .single-card p::-webkit-scrollbar {
   background-color: var(--bg-dark-color);
   width: 5px;
 }
+
 section.testimonial .cards-list .single-card p::-webkit-scrollbar-thumb {
   background-color: var(--text-primary);
 }
@@ -562,12 +564,7 @@ section.contact .contact-cards .contact-info .single-contact .info .detail {
   font-weight: 300;
 }
 
-section.contact
-  .contact-cards
-  .contact-info
-  .single-contact
-  .info
-  .detail:hover {
+section.contact .contact-cards .contact-info .single-contact .info .detail:hover {
   color: #fff;
 }
 
@@ -782,6 +779,7 @@ section.contact .contact-cards .contact-form button {
   section.about .about-info {
     flex-direction: row;
   }
+
   /* Testimonial section */
   section.testimonial .cards-list {
     width: 85%;
@@ -795,6 +793,7 @@ section.contact .contact-cards .contact-form button {
   section.contact .contact-cards .contact-form form .credentials {
     flex-direction: row;
   }
+
   section.contact .contact-cards .contact-form {
     width: 500px;
     border-left: 2px solid #a3a3a3;

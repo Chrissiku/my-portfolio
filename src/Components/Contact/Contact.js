@@ -1,12 +1,11 @@
-import React from "react";
-import Icon from "react-icons-kit";
-import { send } from "react-icons-kit/fa/send";
-import { icon } from "./contactInfo";
-import ParticlesBg from "particles-bg";
-import { contactInfo } from "./contactInfo";
+import React from 'react';
+import Icon from 'react-icons-kit';
+import { send } from 'react-icons-kit/fa/send';
+import ParticlesBg from 'particles-bg';
+import { icon, contactInfo } from './contactInfo';
 
 const Contact = () => {
-  let config = {
+  const config = {
     num: [1, 1],
     rps: 0.1,
     radius: [5, 40],
@@ -16,14 +15,14 @@ const Contact = () => {
     alpha: [0.6, 0],
     scale: [0.1, 0.2],
     body: icon,
-    position: "all",
-    cross: "dead",
+    position: 'all',
+    cross: 'dead',
     random: 2,
   };
   return (
     <>
       <section className="contact" id="contact">
-        <ParticlesBg type="custom" config={config} bg={true} />
+        <ParticlesBg type="custom" config={config} bg />
         <h2 className="title">Contact</h2>
         <div className="contact-cards">
           <div className="contact-info">
@@ -43,7 +42,7 @@ const Contact = () => {
           </div>
           <div className="contact-form">
             <span>
-              * All Information are required, Complete the form bellow and let's
+              * All Information are required, Complete the form bellow and let&apos;s
               connect
             </span>
             <form>
@@ -73,9 +72,11 @@ const Contact = () => {
                 className="field static"
                 rows={5}
                 required
-              ></textarea>
+              />
               <button type="submit" className="btn">
-                Send <Icon icon={send} size={20}/>
+                Send
+                {' '}
+                <Icon icon={send} size={20} />
               </button>
             </form>
           </div>
