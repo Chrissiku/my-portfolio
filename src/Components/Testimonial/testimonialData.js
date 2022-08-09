@@ -163,7 +163,7 @@ const TestimonialData = [
       },
       {
         id: Id(),
-        mediaLink: 'https://github.com/brainconnect93',
+        mediaLink: 'https://brainconnect93.github.io/My-Portfolio/',
         icon: <Icon icon={globe} size={22} />,
         class: 'portfolio',
       },
