@@ -11,6 +11,35 @@ const TestimonialData = [
   {
     id: Id(),
     picture:
+      'https://user-images.githubusercontent.com/101924220/183712396-da5193a2-d986-4ea7-975f-c99ff0c9fa26.png',
+    name: 'Debabrata Mandal',
+    recomandation:
+      'Christian is a highly talented and dedicated professional. He is technically robust, highly knowledgeable, detail-oriented, and has a strong work ethic. He has a growth mindset and is open-minded and friendly. He is an outstanding team player and has great soft skills. It was really a pleasure to work with him. I am sure that he would be a valuable asset to any company.',
+    social: [
+      {
+        id: Id(),
+        mediaLink: 'https://twitter.com/bapidebabrata',
+        icon: <Icon icon={twitter} size={22} />,
+        class: 'twitter',
+      },
+      {
+        id: Id(),
+        mediaLink: 'https://www.linkedin.com/in/erdebabratamandal/',
+        icon: <Icon icon={linkedin} size={22} />,
+        class: 'linkedin',
+      },
+      {
+        id: Id(),
+        mediaLink: 'https://github.com/NayanKaran',
+        icon: <Icon icon={github} size={22} />,
+        class: 'github',
+      },
+    ],
+  },
+
+  {
+    id: Id(),
+    picture:
       'https://user-images.githubusercontent.com/101924220/183704376-0552e165-500c-4c13-80ac-8d98a4b96988.jpg',
     name: 'Sanja Mandic',
     recomandation:
@@ -46,6 +75,34 @@ const TestimonialData = [
   {
     id: Id(),
     picture:
+      'https://user-images.githubusercontent.com/101924220/183712384-a995e74f-0763-42c0-8d2a-72b771d4c10c.jpg',
+    name: 'Joseph (JoDrack) Buingo',
+    recomandation:
+      "Working and studying with Christian Siku was an enormous pleasure. I found him as someone with great experience and a profound understanding of complex problems. When you really get to connect with him, you'll find an incredible person with exceptional skills! I find his enthusiasm and dedication both inspiring and motivating. I have constantly felt Christian Siku was one of the most effective teammates I've ever had the opportunity of working and sharing with.",
+    social: [
+      {
+        id: Id(),
+        mediaLink: 'https://twitter.com/Joseph60761952',
+        icon: <Icon icon={twitter} size={22} />,
+        class: 'twitter',
+      },
+      {
+        id: Id(),
+        mediaLink: 'https://www.linkedin.com/in/jodrack/',
+        icon: <Icon icon={linkedin} size={22} />,
+        class: 'linkedin',
+      },
+      {
+        id: Id(),
+        mediaLink: 'https://github.com/joseph07-drack',
+        icon: <Icon icon={github} size={22} />,
+        class: 'github',
+      },
+    ],
+  },
+  {
+    id: Id(),
+    picture:
       'https://user-images.githubusercontent.com/101924220/183704228-b64b7bf0-e192-46bf-938f-4598b5f3ebc9.jpg',
     name: 'Favour Amarachi Ezeugwa',
     recomandation:
@@ -74,6 +131,41 @@ const TestimonialData = [
         mediaLink: 'https://angel.co/u/favour-amarachi-ezeugwa',
         icon: <Icon icon={angellist} size={22} />,
         class: 'angellist',
+      },
+    ],
+  },
+
+  {
+    id: Id(),
+    picture:
+      'https://user-images.githubusercontent.com/101924220/183712388-2a7610a1-933f-4e3c-8276-e639b37ad45b.jpg',
+    name: 'Afolabi Akorede',
+    recomandation:
+      "'Clear and Concise' is the phrase that comes to mind when i think about Christian. intelligent and clever is part of his attributes, I can attest that he can describe a technical topic in a clear details in english. He is pleasant to work with and considerate, Christian would be an asset to any team.",
+    social: [
+      {
+        id: Id(),
+        mediaLink: 'https://twitter.com/brainconnect0',
+        icon: <Icon icon={twitter} size={22} />,
+        class: 'twitter',
+      },
+      {
+        id: Id(),
+        mediaLink: 'https://www.linkedin.com/in/brainconnect93/',
+        icon: <Icon icon={linkedin} size={22} />,
+        class: 'linkedin',
+      },
+      {
+        id: Id(),
+        mediaLink: 'https://github.com/brainconnect93',
+        icon: <Icon icon={github} size={22} />,
+        class: 'github',
+      },
+      {
+        id: Id(),
+        mediaLink: 'https://github.com/brainconnect93',
+        icon: <Icon icon={globe} size={22} />,
+        class: 'portfolio',
       },
     ],
   },

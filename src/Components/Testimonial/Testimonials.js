@@ -12,7 +12,7 @@ const Testimonial = () => (
         target="_blank"
         rel="noreferrer"
       >
-        Publish your testimonial now
+        Post your testimonial now
       </a>
     </section>
   </>
