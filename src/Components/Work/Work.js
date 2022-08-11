@@ -1,10 +1,24 @@
-import React, { useState } from 'react';
-import Icon from 'react-icons-kit';
-import { arrowUp } from 'react-icons-kit/fa/arrowUp';
-import { arrowDown } from 'react-icons-kit/fa/arrowDown';
-import works from './WorkData';
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
+/* eslint-disable comma-dangle */
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import Icon from "react-icons-kit";
+import { arrowUp } from "react-icons-kit/fa/arrowUp";
+import { arrowDown } from "react-icons-kit/fa/arrowDown";
+import LoadAllWOrks from "../../Redux/FetchData";
+import works from "./WorkData";
 
 const Work = () => {
+  const dispatch = useDispatch();
+  const worksState = useSelector((state) => state);
+  useEffect(() => {
+    if (worksState.length === 0) {
+      dispatch(LoadAllWOrks());
+    }
+  }, []);
+
   const [visible, setVisible] = useState(6);
 
   const showMore = () => {
@@ -41,18 +55,18 @@ const Work = () => {
       <section className="work" id="work">
         <h2 className="title">Works</h2>
         <div className="works-list">
-          {works.slice(0, visible).map((work) => (
+          {worksState.slice(0, visible).map((work) => (
             <div className="single-work" key={work.id}>
               <div className="work-img">
-                <img src={work.image} alt={work.title} />
+                <img src={work.picture} alt={work.title} />
               </div>
               <h2 className="work-title">{work.title}</h2>
               <p>
-                {work.text.substring(0, 90)}
-                {' . . . '}
-                <a className="read-more" href="/">
+                {work.caption.substring(0, 90)}
+                {" . . . "}
+                <Link to={`/${work.id}`} className="read-more">
                   Read more
-                </a>
+                </Link>
               </p>
             </div>
           ))}

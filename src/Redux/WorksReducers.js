@@ -1,7 +1,6 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable quotes */
-const LOAD_WORKS = "LOAD_WORKS";
-const INITIAL_STATE = [];
+import { LOAD_WORKS, INITIAL_STATE } from "./Constants";
 
 const WorksReducers = (state = INITIAL_STATE, action) => {
   switch (action.type) {
