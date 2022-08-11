@@ -50,7 +50,7 @@ body {
   font-weight: 500;
   border-radius: 8px;
   transition: all 0.5s;
-  cursor: pointer;
+  cursor: url(./Images/mouse.png), auto;
 }
 
 .btn:hover {
@@ -133,7 +133,7 @@ header nav ul a.active > li {
 }
 
 footer a {
-  cursor: pointer;
+  cursor: url(./Images/mouse.png), auto;
 }
 
 footer span {
@@ -166,7 +166,7 @@ header .menu-icon {
   position: absolute;
   top: 10px;
   right: 20px;
-  cursor: pointer;
+  cursor: url(./Images/mouse.png), auto;
   background-color: transparent;
   outline: none;
   color: var(--text-white);
@@ -558,7 +558,7 @@ section.contact .contact-cards .contact-info .single-contact {
 
 section.contact .contact-cards .contact-info .single-contact:hover {
   /* background-color: var(--text-primary); */
-  cursor: pointer;
+  cursor: url(./Images/mouse.png), auto;
 }
 
 section.contact .contact-cards .contact-info .single-contact:hover > i {
@@ -594,7 +594,12 @@ section.contact .contact-cards .contact-info .single-contact .info .detail {
   font-weight: 300;
 }
 
-section.contact .contact-cards .contact-info .single-contact .info .detail:hover {
+section.contact
+  .contact-cards
+  .contact-info
+  .single-contact
+  .info
+  .detail:hover {
   color: #fff;
 }
 
