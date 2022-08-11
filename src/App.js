@@ -1,22 +1,18 @@
-import React from 'react';
-import './App.css';
-import Header from './Components/Header/Header';
-import Home from './Components/Home/Home';
-import About from './Components/About/About';
-import Work from './Components/Work/Work';
-import Testimonial from './Components/Testimonial/Testimonials';
-import Contact from './Components/Contact/Contact';
-import Footer from './Components/Footer/Footer';
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
+/* eslint-disable comma-dangle */
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import LandingPage from "./Components/LandingPage";
+import SingleWork from "./Components/Work/SingleWork";
 
 const App = () => (
   <>
-    <Header />
-    <Home />
-    <About />
-    <Work />
-    <Testimonial />
-    <Contact />
-    <Footer />
+    <Routes>
+      <Route path="/*" exact="true" element={<LandingPage />} />
+      <Route path=":id" exact="true" element={<SingleWork />} />
+    </Routes>
   </>
 );
 
