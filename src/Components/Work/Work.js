@@ -64,7 +64,8 @@ const Work = () => {
               <p>
                 {work.caption.substring(0, 90)}
                 {" . . . "}
-                <Link to={`/${work.id}`} className="read-more">
+                <br />
+                <Link to={`/work/${work.title}`} className="read-more">
                   Read more
                 </Link>
               </p>

@@ -7,9 +7,9 @@ import { useParams, Link } from "react-router-dom";
 const SingleWork = () => {
   const params = useParams();
   const workState = useSelector((state) => state);
-  const CurrentWork = workState.find((works) => works.id === params.id);
+  const CurrentWork = workState.find((works) => works.title === params.title);
   const {
-    id, title, picture, caption,
+    title, id, picture, caption
   } = CurrentWork;
   return (
     <>
