@@ -691,6 +691,44 @@ footer .line {
   width: 100%;
 }
 
+main.single-work .back i {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--text-secondary);
+}
+
+main.single-work .content {
+  padding: 40px;
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+main.single-work .content div {
+  width: 100%;
+  border: 1px solid red;
+}
+
+main.single-work .content div.lef {
+  border: 1px solid yellow;
+}
+
+main.single-work .content div img {
+  width: 100px;
+}
+
+main.single-work .content .left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 @media screen and (min-width: 768px) {
   /* Header */
 
@@ -815,5 +853,13 @@ footer .line {
   section.contact .contact-cards .contact-form {
     width: 500px;
     border-left: 2px solid #a3a3a3;
+  }
+
+  main.single-work .content div:first-child {
+    width: calc(40% - 1rem);
+  }
+
+  main.single-work .content div:nth-child(2) {
+    width: calc(60% - 1rem);
   }
 }

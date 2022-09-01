@@ -19,6 +19,22 @@ const Work = () => {
     }
   }, []);
 
+  //   useEffect(() => {
+  //     const url = "https://jsonplaceholder.typicode.com/todos/1";
+
+  //     const fetchData = async () => {
+  //       try {
+  //         const response = await fetch(url);
+  //         const json = await response.json();
+  //         console.log("test", json);
+  //       } catch (error) {
+  //         console.log("error", error);
+  //       }
+  //     };
+
+  //     fetchData();
+  // }, []);
+
   const [visible, setVisible] = useState(6);
 
   const showMore = () => {
