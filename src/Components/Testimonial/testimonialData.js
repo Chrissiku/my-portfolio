@@ -172,7 +172,8 @@ const TestimonialData = [
 
   {
     id: Id(),
-    picture: 'https://user-images.githubusercontent.com/101924220/183704294-bf22d575-ec38-4494-b7f4-3c91b37aa75c.jpg',
+    picture:
+      'https://user-images.githubusercontent.com/101924220/183704294-bf22d575-ec38-4494-b7f4-3c91b37aa75c.jpg',
     name: 'Silvia Tofana',
     recomandation:
       'He has good experience in the workings of how to handle works regarding servers, databases, and also system engineering. He also has good team management abilities and is a really dedicated worker. So I would really like to recommend him for the post of full stack developer of your company. I can assure you that, he would be a great option for helping your company in its future growth and success. Thank you for taking the time to read this recommendation from your busy schedule.',
@@ -194,6 +195,40 @@ const TestimonialData = [
         mediaLink: 'https://github.com/silviatofana',
         icon: <Icon icon={github} size={22} />,
         class: 'github',
+      },
+    ],
+  },
+  {
+    id: Id(),
+    picture:
+      'https://user-images.githubusercontent.com/101924220/189416603-5b794526-28ac-4dc7-887f-b592adf2072d.jpg',
+    name: 'Ritobroto Mukherjee',
+    recomandation:
+      'Chirs is a very proactive personality in case of learning new things or trying out something new. He has a good sense while writing industry-standard code. He is a very fun to work with guy and helpful at times if needed. I would like to highly recommend him for any SDE role. I believe he can add good value to any tech team, be it remote or on-site. 🥇✔',
+    social: [
+      {
+        id: Id(),
+        mediaLink: 'https://twitter.com/mukherjeerito',
+        icon: <Icon icon={twitter} size={22} />,
+        class: 'twitter',
+      },
+      {
+        id: Id(),
+        mediaLink: 'https://www.linkedin.com/in/ritobroto-m3/',
+        icon: <Icon icon={linkedin} size={22} />,
+        class: 'linkedin',
+      },
+      {
+        id: Id(),
+        mediaLink: 'https://github.com/RitobrotoMukherjee',
+        icon: <Icon icon={github} size={22} />,
+        class: 'github',
+      },
+      {
+        id: Id(),
+        mediaLink: 'https://ritobroto-mukherjee.blogspot.com/',
+        icon: <Icon icon={globe} size={22} />,
+        class: 'portfolio',
       },
     ],
   },
