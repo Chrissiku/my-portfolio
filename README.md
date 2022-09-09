@@ -1,4 +1,5 @@
 # my-portfolio
+![heya](https://user-images.githubusercontent.com/101924220/189430225-656b8e02-e431-447d-9cca-8081db7dc888.png)
 
 <!-- Grace ![r1FdwNp1_400x400](https://user-images.githubusercontent.com/101924220/183703261-51a3ea35-b7c2-4207-953c-9f5ded90eb60.jpg) -->
 <!-- Silvia ![100236377](https://user-images.githubusercontent.com/101924220/183704294-bf22d575-ec38-4494-b7f4-3c91b37aa75c.jpg) -->
