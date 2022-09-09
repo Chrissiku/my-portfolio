@@ -49,7 +49,7 @@ const Work = () => {
               </div>
               <h2 className="work-title">{work.title}</h2>
               <p>
-                {work.caption.substring(0, 90)}
+                {work.caption.substring(0, 100)}
                 {" . . . "}
                 <br />
               </p>

@@ -413,9 +413,12 @@ section.work .works-list .single-work {
   gap: 0.5rem;
   padding: 0 0 10px 0;
   box-shadow: #a3a3a3 0 0 2px 0;
-  border: 1px solid #a3a3a3;
+  border: 2px solid #a3a3a3;
+  transition: all 0.5s;
 }
-
+section.work .works-list .single-work:hover {
+  border: 2px solid var(--text-secondary);
+}
 section.work .works-list .single-work .work-img {
   width: 100%;
   height: 220px;
@@ -429,6 +432,7 @@ section.work .works-list .single-work .work-img img {
   transform: scale(-0.9, 0.9);
   -webkit-filter: grayscale(1) blur(2px);
   filter: grayscale(1) blur(2px);
+  border-bottom: 3px solid var(--text-secondary);
 }
 
 section.testimonial .cards-list .single-card .img img {
@@ -630,7 +634,12 @@ section.contact .contact-cards .contact-info .single-contact .info .detail {
   font-weight: 300;
 }
 
-section.contact .contact-cards .contact-info .single-contact .info .detail:hover {
+section.contact
+  .contact-cards
+  .contact-info
+  .single-contact
+  .info
+  .detail:hover {
   color: #fff;
 }
 
