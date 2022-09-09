@@ -424,9 +424,25 @@ section.work .works-list .single-work .work-img {
 section.work .works-list .single-work .work-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: all 1s;
+  object-fit: fill;
+  transition: all 0.5s;
+  transform: scale(-0.9, 0.9);
+  -webkit-filter: grayscale(1) blur(2px);
+  filter: grayscale(1) blur(2px);
+}
+
+section.testimonial .cards-list .single-card .img img {
+  width: 100px;
+  transform: scale(1.2);
+  border: 3px solid var(--text-primary);
+  border-radius: 50px;
+  padding: 2px;
+}
+
+section.work .works-list .single-work:hover > .work-img img {
   transform: scale(1);
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
 }
 
 section.work .works-list .single-work .work-title {
@@ -493,14 +509,6 @@ section.testimonial .cards-list .single-card {
 
 section.testimonial .cards-list .single-card:hover {
   background-color: #030636;
-}
-
-section.testimonial .cards-list .single-card .img img {
-  width: 100px;
-  transform: scale(1.2);
-  border: 3px solid var(--text-primary);
-  border-radius: 50px;
-  padding: 2px;
 }
 
 section.testimonial .cards-list .single-card h4 {
