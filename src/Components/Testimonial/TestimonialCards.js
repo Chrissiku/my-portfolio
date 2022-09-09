@@ -55,7 +55,7 @@ const TestimonyCards = () => {
                   <a
                     href={social.mediaLink}
                     target="_blanc"
-                    noreferrer="true"
+                    rel="noreferrer"
                     key={social.id}
                     className={social.class}
                   >
