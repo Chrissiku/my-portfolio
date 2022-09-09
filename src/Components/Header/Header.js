@@ -6,6 +6,7 @@ import Icon from 'react-icons-kit';
 import { thLarge } from 'react-icons-kit/fa/thLarge';
 import { close } from 'react-icons-kit/fa/close';
 import { linksArray, socialArray } from './headerData';
+import Resume from '../../Resume/Christian_Siku_Resume.pdf';
 
 const Header = () => {
   const navigationRef = useRef();
@@ -48,8 +49,8 @@ const Header = () => {
               </li>
             ))}
             <div className="button">
-              <a href="/" rel="noreferrer" className="btn cv">
-                Download CV
+              <a href={Resume} rel="noreferrer" className="btn cv" target="_blank">
+                My Resume
               </a>
             </div>
           </ul>

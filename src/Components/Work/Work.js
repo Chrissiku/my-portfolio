@@ -3,10 +3,10 @@
 /* eslint-disable comma-dangle */
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import Icon from "react-icons-kit";
-import { arrowUp } from "react-icons-kit/fa/arrowUp";
 import { arrowDown } from "react-icons-kit/fa/arrowDown";
+import { github } from "react-icons-kit/fa/github";
+import { eye } from "react-icons-kit/fa/eye";
 import LoadAllWOrks from "../../Redux/FetchData";
 import works from "./WorkData";
 
@@ -19,43 +19,14 @@ const Work = () => {
     }
   }, []);
 
-  //   useEffect(() => {
-  //     const url = "https://jsonplaceholder.typicode.com/todos/1";
-
-  //     const fetchData = async () => {
-  //       try {
-  //         const response = await fetch(url);
-  //         const json = await response.json();
-  //         console.log("test", json);
-  //       } catch (error) {
-  //         console.log("error", error);
-  //       }
-  //     };
-
-  //     fetchData();
-  // }, []);
-
-  const [visible, setVisible] = useState(6);
+  const [visible, setVisible] = useState(3);
 
   const showMore = () => {
-    setVisible((prev) => prev + works.length - 6);
-  };
-
-  const showLess = () => {
-    setVisible((prev) => prev === 6);
+    setVisible((prev) => prev + works.length - 3);
   };
 
   function LoadMore() {
-    if (works.length > 6) {
-      if (visible === works.length) {
-        return (
-          <button type="button" className="btn" onClick={showLess}>
-            Show Less
-            {' '}
-            <Icon icon={arrowUp} size={15} />
-          </button>
-        );
-      }
+    if (works.length > visible) {
       return (
         <button type="button" className="btn" onClick={showMore}>
           Show More
@@ -81,10 +52,31 @@ const Work = () => {
                 {work.caption.substring(0, 90)}
                 {" . . . "}
                 <br />
-                <Link to={`/work/${work.title}`} className="read-more">
-                  Read more
-                </Link>
               </p>
+              <div className="project-btn">
+                {work.project[0] && (
+                  <a
+                    href={work.project[1]}
+                    className="link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Icon icon={github} size={20} />
+                    Project
+                  </a>
+                )}
+                {work.live[0] && (
+                  <a
+                    href={work.live[1]}
+                    className="link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Icon icon={eye} size={20} />
+                    Live
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
