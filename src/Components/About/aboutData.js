@@ -8,19 +8,19 @@ const ICON_SIZE = 50;
 const skill = [
   {
     id: AboutId(),
+    icon: <Icon icon={code} size={ICON_SIZE} />,
+    skill: 'React.js, Redux, Javascript(ES6), Jquey, HTML(JSX), CSS, Jest, etc',
+  },
+  {
+    id: AboutId(),
     icon: <Icon icon={gears} size={ICON_SIZE} />,
     skill:
       'Mentorship, Pair Programming, Agile methodology, Active Listening, Leadership, Communication, Time Management, Problem Solving.',
   },
   {
     id: AboutId(),
-    icon: <Icon icon={code} size={ICON_SIZE} />,
-    skill: 'React.js, Redux, Javascript(ES6), HTML(JSX), CSS, Jest, etc',
-  },
-  {
-    id: AboutId(),
     icon: <Icon icon={database} size={ICON_SIZE} />,
-    skill: 'Ruby,Ruby on Rails, Rspec, SQL, PHP, MySQL, PostgreSQL,etc.',
+    skill: 'Ruby,Ruby on Rails, Rspec, SQL, PHP, MySQL, PostgreSQL, etc.',
   },
 ];
 

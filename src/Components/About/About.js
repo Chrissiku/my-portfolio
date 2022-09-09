@@ -1,5 +1,5 @@
 import React from 'react';
-import faceCo from '../../Images/face_co.svg';
+import Avatar from '../../Images/avatar.jpg';
 import skill from './aboutData';
 
 const About = () => (
@@ -8,7 +8,7 @@ const About = () => (
       <h2 className="title">About Me</h2>
       <div className="about-info">
         <div className="about-img">
-          <img src={faceCo} alt="Chris's Avatar" />
+          <img src={Avatar} alt="Chris's Avatar" />
         </div>
         <div className="about-text">
           <h3>Who Am I</h3>

@@ -2,6 +2,7 @@
 import ParticlesBg from 'particles-bg';
 import { Link } from 'react-scroll';
 import icon from './Icon';
+import Resume from '../../Resume/Christian_Siku_Resume.pdf';
 
 const Home = () => {
   const config = {
@@ -24,7 +25,7 @@ const Home = () => {
         <ParticlesBg type="custom" config={config} bg />
         <ParticlesBg num={50} type="cobweb" bg color="#0ab4e7" />
         <div className="dev-info">
-          <h1>Hi, I&apos; Chris Siku</h1>
+          <h1>Hi, I&apos;m Chris Siku</h1>
           <h2>A Software Developer</h2>
         </div>
         <p>
@@ -48,9 +49,9 @@ const Home = () => {
               Contact Me
             </button>
           </Link>
-          {/* <button type="button" className="btn cv">
-            Download Cv
-          </button> */}
+          <a href={Resume} rel="noreferrer" className="btn cv" target="_blank">
+            My Resume
+          </a>
         </div>
       </section>
     </>

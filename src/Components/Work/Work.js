@@ -1,31 +1,32 @@
-import React, { useState } from 'react';
-import Icon from 'react-icons-kit';
-import { arrowUp } from 'react-icons-kit/fa/arrowUp';
-import { arrowDown } from 'react-icons-kit/fa/arrowDown';
-import works from './WorkData';
+/* eslint-disable linebreak-style */
+/* eslint-disable quotes */
+/* eslint-disable comma-dangle */
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import Icon from "react-icons-kit";
+import { arrowDown } from "react-icons-kit/fa/arrowDown";
+import { github } from "react-icons-kit/fa/github";
+import { eye } from "react-icons-kit/fa/eye";
+import LoadAllWOrks from "../../Redux/FetchData";
+import works from "./WorkData";
 
 const Work = () => {
-  const [visible, setVisible] = useState(6);
+  const dispatch = useDispatch();
+  const worksState = useSelector((state) => state);
+  useEffect(() => {
+    if (worksState.length === 0) {
+      dispatch(LoadAllWOrks());
+    }
+  }, []);
+
+  const [visible, setVisible] = useState(3);
 
   const showMore = () => {
-    setVisible((prev) => prev + works.length - 6);
-  };
-
-  const showLess = () => {
-    setVisible((prev) => prev === 6);
+    setVisible((prev) => prev + works.length - 3);
   };
 
   function LoadMore() {
-    if (works.length > 6) {
-      if (visible === works.length) {
-        return (
-          <button type="button" className="btn" onClick={showLess}>
-            Show Less
-            {' '}
-            <Icon icon={arrowUp} size={15} />
-          </button>
-        );
-      }
+    if (works.length > visible) {
       return (
         <button type="button" className="btn" onClick={showMore}>
           Show More
@@ -41,19 +42,41 @@ const Work = () => {
       <section className="work" id="work">
         <h2 className="title">Works</h2>
         <div className="works-list">
-          {works.slice(0, visible).map((work) => (
+          {worksState.slice(0, visible).map((work) => (
             <div className="single-work" key={work.id}>
               <div className="work-img">
-                <img src={work.image} alt={work.title} />
+                <img src={work.picture} alt={work.title} />
               </div>
               <h2 className="work-title">{work.title}</h2>
               <p>
-                {work.text.substring(0, 90)}
-                {' . . . '}
-                <a className="read-more" href="/">
-                  Read more
-                </a>
+                {work.caption.substring(0, 90)}
+                {" . . . "}
+                <br />
               </p>
+              <div className="project-btn">
+                {work.project[0] && (
+                  <a
+                    href={work.project[1]}
+                    className="link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Icon icon={github} size={20} />
+                    Project
+                  </a>
+                )}
+                {work.live[0] && (
+                  <a
+                    href={work.live[1]}
+                    className="link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Icon icon={eye} size={20} />
+                    Live
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
