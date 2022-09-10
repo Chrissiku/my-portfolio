@@ -16,7 +16,7 @@ html {
 
 ::-webkit-scrollbar {
   background-color: var(--text-primary);
-  width: 6px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -33,15 +33,18 @@ html {
   --font-family: "Poppins", sans-serif;
 }
 
+::-webkit-scrollbar:hover {
+  cursor: pointer;
+}
+
+::selection {
+  background-color: #46423b;
+}
+
 body {
   background-color: var(--bg-dark-color);
   color: var(--text-wight);
   font-family: var(--font-family);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .btn {
@@ -204,6 +207,11 @@ section.home {
   padding: 0 10px;
   background-color: var(--bg-even-section);
   text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 section.home .dev-info h1 {
@@ -416,9 +424,11 @@ section.work .works-list .single-work {
   border: 2px solid #a3a3a3;
   transition: all 0.5s;
 }
+
 section.work .works-list .single-work:hover {
   border: 2px solid var(--text-secondary);
 }
+
 section.work .works-list .single-work .work-img {
   width: 100%;
   height: 220px;
@@ -634,12 +644,7 @@ section.contact .contact-cards .contact-info .single-contact .info .detail {
   font-weight: 300;
 }
 
-section.contact
-  .contact-cards
-  .contact-info
-  .single-contact
-  .info
-  .detail:hover {
+section.contact .contact-cards .contact-info .single-contact .info .detail:hover {
   color: #fff;
 }
 
