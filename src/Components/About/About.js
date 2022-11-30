@@ -13,12 +13,7 @@ const About = () => (
         <div className="about-text">
           <h3>Who Am I</h3>
           <p>
-            I&apos;m a transversal software developer with 2 years of experience in
-            the management of web development and embedded electronics
-            projects. Specialized in building responsive web-based
-            applications Sociable and determined, I pursue innovation across
-            the world and its cultures. Organize, renew and learn are my
-            watchwords. Something I can&apos;t do? I will learn it...
+            Full-stack software developer and holder of a degree, Bachelor&apos;s degree,  in computer science, I am a bilingual and transversal profile with +3 years of experience in the development of web applications and embedded electronics. Sociable and determined, I pursue innovation across the world and its cultures. Organize, renew and learn are my watchwords. Something I can't do? I learn it!
           </p>
         </div>
       </div>
